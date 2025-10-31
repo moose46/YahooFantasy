@@ -1,7 +1,7 @@
 # This is a sample Python script.
 import sqlite3
 from sqlite3 import Cursor
-# Push to github again
+# Push to github again and again
 teams = ["Baltimore","Miami","Chicago","Cincinnati","Detroit","Minnesota", "Green Bay","Carolina","Los Angeles (LAC)","Tennessee","New England","Atlanta","San Francisco","New York Giants (NYG)","Indianapolis","Pittsburgh","Houston","Denver","Jacksonville","Las Vegas","Los Angeles (LAR)", "New Orleans","Kansas City","Buffalo","Seattle","Washington","Dallas","Arizona"]
 # Press Ctrl+F5 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
