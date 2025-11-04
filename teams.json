@@ -1,0 +1,258 @@
+[
+  {
+    "id": 11,
+    "team_name": "New England Patriots",
+    "division": "AFC East",
+    "wins": 7,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 25,
+    "team_name": "Buffalo Bills",
+    "division": "AFC East",
+    "wins": 7,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 2,
+    "team_name": "Miami Dolphins",
+    "division": "AFC East",
+    "wins": 2,
+    "losses": 7,
+    "ties": 0
+  },
+  {
+    "id": 15,
+    "team_name": "New York Jets (NYJ)",
+    "division": "AFC East",
+    "wins": 1,
+    "losses": 7,
+    "ties": 0
+  },
+  {
+    "id": 17,
+    "team_name": "Pittsburgh Steelers",
+    "division": "AFC North",
+    "wins": 5,
+    "losses": 2,
+    "ties": 1
+  },
+  {
+    "id": 1,
+    "team_name": "Baltimore Ravens",
+    "division": "AFC North",
+    "wins": 3,
+    "losses": 5,
+    "ties": 0
+  },
+  {
+    "id": 4,
+    "team_name": "Cincinnati Bengals",
+    "division": "AFC North",
+    "wins": 3,
+    "losses": 6,
+    "ties": 0
+  },
+  {
+    "id": 31,
+    "team_name": "Cleveland Browns",
+    "division": "AFC North",
+    "wins": 2,
+    "losses": 6,
+    "ties": 0
+  },
+  {
+    "id": 16,
+    "team_name": "Indianapolis Colts",
+    "division": "AFC South",
+    "wins": 7,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 20,
+    "team_name": "Jacksonville Jaguars",
+    "division": "AFC South",
+    "wins": 5,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 18,
+    "team_name": "Houston Texans",
+    "division": "AFC South",
+    "wins": 3,
+    "losses": 5,
+    "ties": 0
+  },
+  {
+    "id": 10,
+    "team_name": "Tennessee Titans",
+    "division": "AFC South",
+    "wins": 1,
+    "losses": 8,
+    "ties": 0
+  },
+  {
+    "id": 19,
+    "team_name": "Denver Broncos",
+    "division": "AFC West",
+    "wins": 7,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 22,
+    "team_name": "Los Angeles Chargers",
+    "division": "AFC West",
+    "wins": 6,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 24,
+    "team_name": "Kansas City Chiefs",
+    "division": "AFC West",
+    "wins": 3,
+    "losses": 5,
+    "ties": 0
+  },
+  {
+    "id": 21,
+    "team_name": "Las Vegas Raiders",
+    "division": "AFC West",
+    "wins": 2,
+    "losses": 6,
+    "ties": 0
+  },
+  {
+    "id": 30,
+    "team_name": "Philadelphia Eagles",
+    "division": "NFC East",
+    "wins": 6,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 27,
+    "team_name": "Washington Commanders",
+    "division": "NFC East",
+    "wins": 3,
+    "losses": 6,
+    "ties": 0
+  },
+  {
+    "id": 28,
+    "team_name": "Dallas Cowboys",
+    "division": "NFC East",
+    "wins": 3,
+    "losses": 4,
+    "ties": 1
+  },
+  {
+    "id": 14,
+    "team_name": "New York Giants (NYG)",
+    "division": "NFC East",
+    "wins": 2,
+    "losses": 7,
+    "ties": 0
+  },
+  {
+    "id": 3,
+    "team_name": "Chicago Bears",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 5,
+    "team_name": "Detroit Lions",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 7,
+    "team_name": "Green Bay Packers",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 2,
+    "ties": 1
+  },
+  {
+    "id": 6,
+    "team_name": "Minnesota Vikings",
+    "division": "NFC North",
+    "wins": 4,
+    "losses": 4,
+    "ties": 0
+  },
+  {
+    "id": 32,
+    "team_name": "Tampa Bay Buccaneers",
+    "division": "NFC South",
+    "wins": 6,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 8,
+    "team_name": "Carolina Panthers",
+    "division": "NFC South",
+    "wins": 5,
+    "losses": 4,
+    "ties": 0
+  },
+  {
+    "id": 12,
+    "team_name": "Atlanta Falcons",
+    "division": "NFC South",
+    "wins": 3,
+    "losses": 5,
+    "ties": 0
+  },
+  {
+    "id": 23,
+    "team_name": "New Orleans Saints",
+    "division": "NFC South",
+    "wins": 1,
+    "losses": 8,
+    "ties": 0
+  },
+  {
+    "id": 9,
+    "team_name": "Los Angeles Rams (LAR)",
+    "division": "NFC West",
+    "wins": 6,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 13,
+    "team_name": "San Francisco 49ers",
+    "division": "NFC West",
+    "wins": 6,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 26,
+    "team_name": "Seattle Seahawks",
+    "division": "NFC West",
+    "wins": 6,
+    "losses": 2,
+    "ties": 0
+  },
+  {
+    "id": 29,
+    "team_name": "Arizona Cardinals",
+    "division": "NFC West",
+    "wins": 2,
+    "losses": 5,
+    "ties": 0
+  }
+]
