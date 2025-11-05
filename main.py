@@ -1,74 +1,74 @@
 # This is a sample Python script.
-import sqlite3
-from sqlite3 import Cursor
-from nfl_data import teams, teamsjson, divisionsjson
+# import sqlite3
+# from sqlite3 import Cursor
+import sys
 
-# https://www.baltimoreravens.com/
+from nfl_data import teamsjson
+import psycopg
+import psycopg_binary
 
+# https://www.baltimoreravens.com/S
 
 # Press Ctrl+F5 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-conn = sqlite3.connect("YahooFantasy.db")
+# conn = sqlite3.connect("YahooFantasy.db")
+try:
+    conn = psycopg.connect(
+        dbname="Football", user="bob", password="admin", host="localhost", port=5432
+    )
+except psycopg.OperationalError:
+    print("Database connection failed.")
+    sys.exit(1)
 
-cursor: Cursor = conn.cursor()
-cursor.execute(f"drop table if exists teams")
-cursor.execute(f"drop table if exists nfl_division")
+with conn.cursor() as cur:
+    cur.execute(f"drop table if exists teams")
+    cur.execute(f"drop table if exists divisions")
+    conn.commit()
 
 
 def create_Tables(team):
     # Use a breakpoint in the code line below to debug your script.
     print(f"Hi, {team}")  # Press F9 to toggle the breakpoint.
-    # cursor.execute(
-    #     f"create table if not exists nfl_division (id integer primary key autoincrement not null, division_name text)"
-    # )
-    # https://sqlite.org/foreignkeys.html
-    # cursor.execute(
-    #     f"CREATE TABLE IF NOT EXISTS {team} (id integer primary key autoincrement not null, team_name text not null, wins integer default 0, losses integer default 0, nfldivision integer, FOREIGN KEY(nfldivision) REFERENCES nfl_division(id))"
-    # )
-    cursor.execute(
-        f"create table if not exists teams (id integer primary key autoincrement not null, team_name text not null, division text not null, wins integer not null default 0, losses integer not null default 0, ties integer not null default 0)"
-    )
+    with conn.cursor() as cur:
+        cur.execute(
+            f"create table if not exists divisions (id serial primary key not null, name varchar not null, CONSTRAINT division_unique UNIQUE (name))"
+        )
+        # cur.execute(
+        #     f"create table if not exists nfl_division (id serial primary key not null, division_name text)"
+        # )
+        # https://sqlite.org/foreignkeys.html
+        # cursor.execute(
+        #     f"CREATE TABLE IF NOT EXISTS {team} (id integer primary key autoincrement not null, team_name text not null, wins integer default 0, losses integer default 0, nfldivision integer, FOREIGN KEY(nfldivision) REFERENCES nfl_division(id))"
+        # )
+        cur.execute(
+            f"create table if not exists teams (id serial primary key not null, team_name varchar not null, division varchar not null, wins int not null default 0, losses int not null default 0, ties int not null default 0,pct float4, www varchar)"
+        )
 
 
 def insert_into_team(name):
     print(f"Hi, {name}")
     try:
-        cursor.execute(
-            f"INSERT INTO teams (team_name, division, wins, losses, ties) VALUES (?,?,?,?,?)",
-            (
-                name["name"],
-                name["Division"],
-                name["Wins"],
-                name["Losses"],
-                name["Ties"],
-            ),
-        )
-    except sqlite3.IntegrityError as e:
+        with conn.cursor() as cur:
+            cur.execute(
+                f"INSERT INTO teams (team_name, division, wins, losses, ties, pct, www) VALUES (%s,%s,%s,%s,%s,%s,%s)",
+                (
+                    name["team_name"],
+                    name["division"],
+                    name["wins"],
+                    name["losses"],
+                    name["ties"],
+                    round(name["wins"] / (name["wins"] + name["losses"]), 3),
+                    name["www"],
+                ),
+            )
+    except psycopg.OperationalError as e:
         print(f"{e}")
-
-
-# Press the green button in the gutter to run the script.
-# https://docs.python.org/3.12/library/sqlite3.html#sqlite3-placeholders
-def create_Divisions(divisionsjson):
-    try:
-        cursor.executemany(
-            "INSERT INTO nfl_division (division_name) VALUES (:name)", divisionsjson
-        )
-    except sqlite3.IntegrityError as e:
-        print(f"{e}")
-        exit()
 
 
 if __name__ == "__main__":
     create_Tables("team")
-    # create_Divisions(divisionsjson)
     for team in teamsjson:
         insert_into_team(team)
 
     conn.commit()
-    # nfldivision = cursor.execute("select * from PyCharm")
-    # for division in nfldivision:
-    #     print(division)
-    cursor.close()
-    conn.close()
-# # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/

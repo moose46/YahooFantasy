@@ -1,0 +1,30 @@
+{
+"games": [
+	{
+		"id" : 3,
+		"week_num" : 1,
+		"home_team" : 27,
+		"road_team" : 25,
+		"game_date" : "2025-09-07",
+		"road_score" : 23,
+		"home_score" : 20
+	},
+	{
+		"id" : 1,
+		"week_num" : 1,
+		"home_team" : 8,
+		"road_team" : 7,
+		"game_date" : "2025-09-07",
+		"road_score" : 17,
+		"home_score" : 16
+	},
+	{
+		"id" : 2,
+		"week_num" : 1,
+		"home_team" : 9,
+		"road_team" : 3,
+		"game_date" : "2025-09-07",
+		"road_score" : 8,
+		"home_score" : 33
+	}
+]}

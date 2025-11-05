@@ -1,0 +1,21 @@
+{
+"select\r\n\troad.team_name,\r\n\troad_score ,\r\n\t'@' || home.team_name,\r\n\thome_score\r\nfrom\r\n\tgames,\r\n\tteams as road,\r\n\tteams as home\r\nwhere\r\n\troad.id = games.road_team\r\n\tand home.id = games.home_team\r\n\tand games.game_date = '2025-09-07'": [
+	{
+		"team_name" : "Cincinnati Bengals",
+		"road_score" : 17,
+		"?column?" : "@Cleveland Browns",
+		"home_score" : 16
+	},
+	{
+		"team_name" : "Miami Dolphins",
+		"road_score" : 8,
+		"?column?" : "@Indianapolis Colts",
+		"home_score" : 33
+	},
+	{
+		"team_name" : "Tampa Bay Buccaneers",
+		"road_score" : 23,
+		"?column?" : "@Atlanta Falcons",
+		"home_score" : 20
+	}
+]}
