@@ -4,6 +4,7 @@
 import sys
 
 from nfl_data import teamsjson
+from json_data.nfl_schedule import team
 import psycopg
 import psycopg_binary
 
@@ -51,6 +52,26 @@ def insert_into_team(name):
         with conn.cursor() as cur:
             cur.execute(
                 f"INSERT INTO teams (team_name, division, wins, losses, ties, pct, www) VALUES (%s,%s,%s,%s,%s,%s,%s)",
+                (
+                    name["team_name"],
+                    name["division"],
+                    name["wins"],
+                    name["losses"],
+                    name["ties"],
+                    round(name["wins"] / (name["wins"] + name["losses"]), 3),
+                    name["www"],
+                ),
+            )
+    except psycopg.OperationalError as e:
+        print(f"{e}")
+
+
+def insert_into_matches(name):
+    print(f"Hi, {name}")
+    try:
+        with conn.cursor() as cur:
+            cur.execute(
+                f"INSERT INTO matches (team_name, division, wins, losses, ties, pct, www) VALUES (%s,%s,%s,%s,%s,%s,%s)",
                 (
                     name["team_name"],
                     name["division"],
