@@ -4,7 +4,7 @@
 import sys
 
 from nfl_data import teamsjson
-from json_data.nfl_schedule import team
+from json_data.nfl_schedule import teams
 import psycopg
 import psycopg_binary
 
@@ -22,9 +22,10 @@ except psycopg.OperationalError:
     sys.exit(1)
 
 with conn.cursor() as cur:
-    cur.execute(f"drop table if exists teams")
-    cur.execute(f"drop table if exists divisions")
-    conn.commit()
+    # cur.execute(f"drop table if exists teams")
+    # cur.execute(f"drop table if exists divisions")
+    # conn.commit()
+    pass
 
 
 def create_Tables(team):
@@ -71,15 +72,15 @@ def insert_into_matches(name):
     try:
         with conn.cursor() as cur:
             cur.execute(
-                f"INSERT INTO matches (team_name, division, wins, losses, ties, pct, www) VALUES (%s,%s,%s,%s,%s,%s,%s)",
+                f"INSERT INTO matches (week, dateutc, location, hometeam, awayteam, hometeamscore, awayteamscore) VALUES (%s,%s,%s,%s,%s,%s,%s)",
                 (
-                    name["team_name"],
-                    name["division"],
-                    name["wins"],
-                    name["losses"],
-                    name["ties"],
-                    round(name["wins"] / (name["wins"] + name["losses"]), 3),
-                    name["www"],
+                    name["RoundNumber"],
+                    name["DateUtc"],
+                    name["Location"],
+                    name["HomeTeam"],
+                    name["AwayTeam"],
+                    name["HomeTeamScore"],
+                    name["AwayTeamScore"],
                 ),
             )
     except psycopg.OperationalError as e:
@@ -87,9 +88,9 @@ def insert_into_matches(name):
 
 
 if __name__ == "__main__":
-    create_Tables("team")
-    for team in teamsjson:
-        insert_into_team(team)
+    # create_Tables("team")
+    for team in teams:
+        insert_into_matches(team)
 
     conn.commit()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

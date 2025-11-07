@@ -1,4 +1,4 @@
-team = [
+teams = [
     {
         "MatchNumber": 1,
         "RoundNumber": 1,
