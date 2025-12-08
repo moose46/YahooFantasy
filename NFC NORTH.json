@@ -1,0 +1,34 @@
+[
+  {
+    "id": 3,
+    "team_name": "Chicago Bears",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 5,
+    "team_name": "Detroit Lions",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 3,
+    "ties": 0
+  },
+  {
+    "id": 7,
+    "team_name": "Green Bay Packers",
+    "division": "NFC North",
+    "wins": 5,
+    "losses": 2,
+    "ties": 1
+  },
+  {
+    "id": 6,
+    "team_name": "Minnesota Vikings",
+    "division": "NFC North",
+    "wins": 4,
+    "losses": 4,
+    "ties": 0
+  }
+]

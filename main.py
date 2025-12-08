@@ -3,10 +3,9 @@
 # from sqlite3 import Cursor
 import sys
 
-from nfl_data import teamsjson
-from json_data.nfl_schedule import teams
 import psycopg
-import psycopg_binary
+
+from json_data.nfl_schedule import teams
 
 # https://www.baltimoreravens.com/S
 
