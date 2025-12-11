@@ -1,3 +1,5 @@
+from datetime import date
+
 week14_picks = [
     {"team": "Detroit", "points": 64, "win": True, "favorite": True},
     {"team": "Seattle", "points": 99, "win": True, "favorite": True},
@@ -17,92 +19,107 @@ week14_picks = [
 week13_picks = [
     {
         "game": [
-            {"team": "Detroit", "points": 64, "win": True, "favorite": True},
-            {"team": "Dallas", "points": 36, "win": True, "favorite": False},
+            {"team": "Tampa Bay", "points": 97, "win": False, "favorite": True},
+            {"team": "Atlanta", "points": 3, "win": False, "favorite": False},
+            {"date": date(2025, 12, 11)},
         ],
     },
     {
         "game": [
-            {"team": "Seattle", "points": 97, "win": True, "favorite": True},
-            {"team": "Atlanta", "points": 3, "win": True, "favorite": False},
-        ]
+            {"team": "Chicago", "points": 97, "win": False, "favorite": True},
+            {"team": "Cleveland", "points": 3, "win": False, "favorite": False},
+            {"date": date(2025, 12, 14)},
+        ],
     },
     {
         "game": [
-            {"team": "Buffalo", "points": 86, "win": True, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Baltimore", "points": 26, "win": False, "favorite": False},
+            {"team": "Cincinnati", "points": 74, "win": False, "favorite": False},
+            {"date": date(2025, 12, 14)},
         ]
     },
     {
         "game": [
             {"team": "Cleveland", "points": 9, "win": False, "favorite": False},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Tennessee", "points": 9, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Tennessee", "points": 9, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Washington", "points": 65, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Washington", "points": 65, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Miami", "points": 81, "win": True, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Miami", "points": 81, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Tampa Bay", "points": 99, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Tampa Bay", "points": 99, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Indianapolis", "points": 53, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Indianapolis", "points": 53, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Baltimore", "points": 99, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Baltimore", "points": 99, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
+        ]
+    },
+    dict(
+        game=[
+            {"team": "Denver", "points": 98, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
+        ]
+    ),
+    dict(
+        game=[
+            {"team": "Green Bay", "points": 71, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
+        ]
+    ),
+    dict(
+        game=[
+            {"team": "Los Angeles", "points": 99, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
+        ]
+    ),
+    {
+        "game": [
+            {"team": "Kansas City", "points": 66, "win": False, "favorite": False},
+            {"team": "", "points": 86, "win": False, "favorite": False},
+            date(2025, 12, 14),
         ]
     },
     {
         "game": [
-            {"team": "Denver", "points": 98, "win": True, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
-        ]
-    },
-    {
-        "game": [
-            {"team": "Green Bay", "points": 71, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
-        ]
-    },
-    {
-        "game": [
-            {"team": "Los Angeles", "points": 99, "win": True, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
-        ]
-    },
-    {
-        "game": [
-            {"team": "Kansas City", "points": 66, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
-        ]
-    },
-    {
-        "game": [
-            {"team": "Philadelphia", "points": 84, "win": False, "favorite": True},
-            {"team": "", "points": 86, "win": True, "favorite": True},
+            {"team": "Pittsburg", "points": 87, "win": False, "favorite": False},
+            {"team": "Miami", "points": 13, "win": False, "favorite": False},
+            date(2025, 12, 15),
         ]
     },
 ]
