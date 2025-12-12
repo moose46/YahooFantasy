@@ -16,7 +16,33 @@ week14_picks = [
     {"team": "Kansas City", "points": 76, "win": False, "favorite": True},
     {"team": "Philadelphia", "points": 73, "win": False, "favorite": True},
 ]
-week13_picks = [
+week15_picks = [
+    {"team": "Baltimore", "points": 0, "win": False, "favorite": False},
+    {"team": "Buffalo", "points": 0, "win": False, "favorite": False},
+    {"team": "Carolina", "points": 89, "win": False, "favorite": True},
+    {"team": "Chicago", "points": 97, "win": False, "favorite": True},
+    {"team": "Cleveland", "points": 0, "win": False, "favorite": False},
+    {"team": "Cincinnati", "points": 74, "win": False, "favorite": True},
+    {"team": "Dallas Cowboys", "points": 92, "win": False, "favorite": False},
+    {"team": "Denver", "points": 61, "win": False, "favorite": False},
+    {"team": "Detroit", "points": 0, "win": False, "favorite": False},
+    {"team": "Houston", "points": 99, "win": False, "favorite": False},
+    {"team": "Kansas City", "points": 59, "win": False, "favorite": False},
+    {"team": "Green Bay", "points": 0, "win": False, "favorite": False},
+    {"team": "Indianapolis", "points": 0, "win": False, "favorite": False},
+    {"team": "Jacksonville", "points": 99, "win": False, "favorite": False},
+    {"team": "Los Angeles (LAR)", "points": 79, "win": False, "favorite": False},
+    {"team": "New England", "points": 51, "win": False, "favorite": False},
+    {"team": "New York Giants", "points": 78, "win": False, "favorite": False},
+    {"team": "Philadelphia", "points": 99, "win": False, "favorite": False},
+    {"team": "Pittsburg Steelers", "points": 87, "win": False, "favorite": False},
+    {"team": "Miami", "points": 0, "win": False, "favorite": False},
+    {"team": "Seattle", "points": 97, "win": False, "favorite": False},
+    {"team": "San Francisco", "points": 99, "win": False, "favorite": False},
+    {"team": "Tampa Bay", "points": 97, "win": False, "favorite": True},
+    {"team": "Washington", "points": 0, "win": False, "favorite": False},
+]
+week13_picks1 = [
     {
         "game": [
             {"team": "Tampa Bay", "points": 97, "win": False, "favorite": True},
@@ -123,10 +149,12 @@ week13_picks = [
         ]
     },
 ]
-sorted_week14 = sorted(week14_picks, key=lambda k: k["points"])
+filtered_week = [d for d in week15_picks if d["points"] > 0]
+sorted_week14 = sorted(filtered_week, key=lambda k: k["points"])
 sum = 0
 for points, team in enumerate(sorted_week14):
-    if team["win"] and team["favorite"]:
+    # if team["win"] and team["favorite"] == True:
+    if team["points"] > 0:
         sum += points + 1
-    print(f"{team['team']:12}: {points+1:2} points")
+        print(f"{points+1:2} : {team['team']:20}")
 print(f"Total Points: {sum}")
